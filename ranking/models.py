@@ -12,4 +12,4 @@ class Student(models.Model):
     ipk = models.FloatField()
     pilihan = models.ForeignKey('Teacher',models.CASCADE)
     def __str__(self):
-        return str(self.nim)
+        return str(self.nim)+'-'+str(self.pilihan.id)

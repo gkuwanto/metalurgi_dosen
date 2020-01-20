@@ -36,7 +36,8 @@ def calculate(students, teachers):
             buangan, _ = max(enumerate(capacities), key=operator.itemgetter(1))
             relations[student.nim] = 'Dibuang ke '+ name[buangan]
             capacities[buangan] -= 1
-    return relations
+    result = [(i,relations[i]) for i in sorted(relations.keys())]
+    return result
 
 
     
