@@ -25,7 +25,7 @@ def input_data(request):
     return redirect('/')
 
 def calculate(students, teachers):
-    capacities = [1 for i in teachers]
+    capacities = [9 for i in teachers]
     name = [teach.name for teach in teachers]
     relations = {}
     for student in students:
